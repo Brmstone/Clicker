@@ -23,8 +23,4 @@
     justify-content: center;
 }
 
-.h1{
-
-
-}
 </style>
