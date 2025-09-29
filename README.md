@@ -1,14 +1,7 @@
-# OCClicker
+# Clicker
+Clicker is a simple clicker that lets the user obtain partitions by clicking and thanks to buyable auto-clickers. 
+By reaching certain thresholds, you can achievements that let you buy more clickers and improvements. 
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
 
 ## Project Setup
 
