@@ -1,46 +1,60 @@
 <template>
-    <div class="upgradeThing">
+    <div class="upgradeThing" @click="console.log('Nom cliqué :', name); $emit('buy', name)" :class="{darkened: isDarkened}">
         <div>
-        <img class="upgradeImage" src="../image/Ludo.PNG" alt="upgradeIMG">
+        <img class="upgradeImage" :src="upgradeData[5]" alt="upgradeIMG">
         </div> 
         <div>
-            <div class="upgradeTxt">
-                <h1 class="upgrade">
-                    Gros caca
-                </h1>
-                <h2 class="">
-                    Quantity
-                </h2>
-            </div>
-            <p>
-                petit pipi
-            </p>
+            <h1 class="upgrade">
+                {{ name }}
+            </h1>
+            <h3>
+                {{ Math.ceil(upgradeData[1]) }}
+            </h3>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "Upgrades"
+        name: "Upgrades",
+        props: {
+            name: String,
+            upgradeData: Array,
+            isDarkened: Boolean
+        }
     }
 </script>
 
 <style scoped>
     .upgradeThing {
         position: relative;
-        background-color: rgb(124, 121, 121);
-        border-radius:10px;
+        background: linear-gradient(rgb(78, 78, 78), rgba(245, 206, 11, 0.913));
         align-items: center;
         display:flex;
+        width: 100%;
+        max-height: 100px;
+        box-sizing: border-box;    
+        border: 3px solid rgba(0, 0, 0, 0.434); 
+        cursor: pointer;
     }
+
+    .upgradeThing.darkened {
+        filter: brightness(0);
+        pointer-events: none;
+        transition: filter 0.3s ease;
+    }   
 
     .upgradeImage {
-        width: 50px;
-        height: 50px;
-        position:relative;
+        width: 30%;
+        height: 30%;
+        margin-left: 20px;
     }
-
-    .upgradeTxt {
-        display:flex;
+    .upgrades-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
     }
 </style>

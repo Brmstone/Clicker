@@ -1,11 +1,10 @@
 <template>
   <div class="cookie" @click="$emit('clicked')">
-    <img src="../image/Ludo.PNG" alt="partition" />
+    <img src="../image/Partition.png" alt="partition" />
   </div>
 </template>
 
 <script>
-import partImg from "@/image/Ludo.PNG"
 export default {
   name: "PartitionButton"
 };
@@ -13,8 +12,8 @@ export default {
 
 <style scoped>
 .cookie img {
-  width: 200px;
-  height: 200px;
+  width: 352px;
+  height: 427px;
   cursor: pointer;
   transition: transform 0.1s;
 }
